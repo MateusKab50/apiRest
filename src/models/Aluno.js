@@ -57,6 +57,7 @@ export default class Aluno extends Model {//Aqui estamos a criar os nossos model
   }
 
   static associate(models){
-    this.hasMany(models.Foto, { foreignkey: 'aluno_id' })
+    this.hasMany(models.Foto, { foreignkey: 'aluno_id' }); //Para colocar a associação com a tabela fotos
+    //.hasMany: que significa um para muitos( um aluno tem muitas fotos(Autores tem muitos Livros) (1-to-M) );
   }
 }
