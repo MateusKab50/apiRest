@@ -1,5 +1,7 @@
 import Sequelize, { Model } from 'sequelize';
 
+//Dado como  criado a class adicionamos o nome da classe como o nome da tabela alunos...
+//E depois abaixo dela criamos os dados que assim seram lançados na tabela alunos como campos, tipos de dados e regras a serem usadas.
 export default class Aluno extends Model {//Aqui estamos a criar os nossos models
   static init(sequelize){
     super.init({
