@@ -1,7 +1,7 @@
 import Aluno from '../models/Aluno';
 import Foto from '../models/Foto';
 
-class AlunoController{
+class AlunoController{//Controla todas ações que podem ser feitas na tabela aluno
 
   async index(req, res){
     try{
