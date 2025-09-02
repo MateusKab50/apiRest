@@ -17,7 +17,7 @@ import alunoRoutes from './routes/alunoRoutes';
 import fotoRoutes from './routes/fotoRoutes';
 
 const whiteList = [
-  'http://localhost:3000'
+  'http://localhost:3001'
 ];
 
 const corsOption = {
