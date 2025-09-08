@@ -4,7 +4,7 @@
 const bcriptjs = require('bcryptjs');
 module.exports = {
   async up (queryInterface) {
-     await queryInterface.bulkInsert('users', 
+     await queryInterface.bulkInsert('users', //trata de adicionar varios dados de uma ver na tabela users como vez nos codigos abaixo
       [
         {
           nome: 'Mateus',

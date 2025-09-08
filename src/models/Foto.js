@@ -40,5 +40,6 @@ export default class Foto extends Model {//Aqui estamos a criar os nossos models
 
   static associate(models) {
     this.belongsTo(models.Aluno, { foreignKey: 'aluno_id', as: 'aluno' });// Define the association with the Aluno model
+    //.belongsTo: em uma relação quer dizer que pertence à ( Livros pentence a Atutores )
   }
 }

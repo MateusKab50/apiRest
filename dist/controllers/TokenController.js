@@ -33,7 +33,7 @@ class TokenController{ //Aqui estamos a criar o nosso controller
       return res.status(401).json({ errors: ['Senha inválida'] }); 
     }//Aqui estamos a verificar se a senha está correta, se não estiver, retornamos um erro 401
 
-    return res.json({ token });
+    return res.json({ token, user: { nome: user.nome, id, email } });
   }
 }
 

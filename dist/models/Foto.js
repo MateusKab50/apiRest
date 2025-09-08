@@ -40,5 +40,6 @@ var _appConfig = require('../config/appConfig'); var _appConfig2 = _interopRequi
 
   static associate(models) {
     this.belongsTo(models.Aluno, { foreignKey: 'aluno_id', as: 'aluno' });// Define the association with the Aluno model
+    //.belongsTo: em uma relação quer dizer que pertence à ( Livros pentence a Atutores )
   }
 } exports.default = Foto;
