@@ -6,7 +6,7 @@ require('./database');
 
 var _path = require('path');
 
-var _express = require('express'); var _express2 = _interopRequireDefault(_express);
+var _express = require('express'); var _express2 = _interopRequireDefault(_express);//ola
 var _cors = require('cors'); var _cors2 = _interopRequireDefault(_cors);
 var _helmet = require('helmet'); var _helmet2 = _interopRequireDefault(_helmet);
 
@@ -18,7 +18,7 @@ var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopReq
 
 const whiteList = [
   'http://localhost:3001',
-  'http://localhost:3000'
+  'http://localhost:3000' //Depois veremos como colocar o domínio da aplicação
 ];
 
 const corsOption = {
