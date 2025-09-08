@@ -17,6 +17,7 @@ var _alunoRoutes = require('./routes/alunoRoutes'); var _alunoRoutes2 = _interop
 var _fotoRoutes = require('./routes/fotoRoutes'); var _fotoRoutes2 = _interopRequireDefault(_fotoRoutes);
 
 const whiteList = [
+  'http://localhost:3001',
   'http://localhost:3000'
 ];
 
@@ -37,7 +38,7 @@ class App {
     this.routes();
   }
 
-  middlewares(){
+  middlewares(){//Middlewares são funções que são executadas antes das rotas
     this.app.use(_cors2.default.call(void 0, corsOption));// Habilita o CORS para permitir requisições de diferentes origens;
     this.app.use(_helmet2.default.call(void 0, ));// Protege a aplicação de algumas vulnerabilidades conhecidas;
     this.app.use(_express2.default.urlencoded({ extended: true }));
