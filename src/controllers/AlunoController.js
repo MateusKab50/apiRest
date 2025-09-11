@@ -15,6 +15,7 @@ class AlunoController{//Controla todas ações que podem ser feitas na tabela al
           model: Foto,
           attributes: [
             'filename',
+            'url'
           ]
         }
       });
