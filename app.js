@@ -18,7 +18,8 @@ import alunoRoutes from './src/routes/alunoRoutes';
 import fotoRoutes from './src/routes/fotoRoutes';
 
 const whiteList = [
-  'http://localhost:3000'
+  'http://localhost:3001',
+  'http://localhost:3000' //Depois veremos como colocar o domínio da aplicação
 ];
 
 const corsOption = {
@@ -42,8 +43,8 @@ class App {
     this.app.use(cors(corsOption));// Habilita o CORS para permitir requisições de diferentes origens;
     this.app.use(helmet());// Protege a aplicação de algumas vulnerabilidades conhecidas;
     this.app.use(express.urlencoded({ extended: true }));// Permite receber dados do formulário no body da requisição;
-    this.app.use(express.json());// Permite receber JSON no body da requisição;
-    this.app.use(express.static(resolve(__dirname, 'uploads')));// Serve para arquivos estáticos;
+    this.app.use(express.json());
+    this.app.use('/images/', express.static(resolve(__dirname, '.', 'uploads')));
   }
 
   routes(){
