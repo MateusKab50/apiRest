@@ -43,7 +43,7 @@ class App {
     this.app.use(helmet());// Protege a aplicação de algumas vulnerabilidades conhecidas;
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
-    this.app.use('/images/', express.static(resolve(__dirname, '..', 'uploads')));
+    this.app.use('/image/', express.static(resolve(__dirname, '..', 'uploads', 'image')));
   }
 
   routes(){
