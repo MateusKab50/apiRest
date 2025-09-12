@@ -40,7 +40,9 @@ class App {
 
   middlewares(){//Middlewares são funções que são executadas antes das rotas
     this.app.use(cors(corsOption));// Habilita o CORS para permitir requisições de diferentes origens;
-    this.app.use(helmet());// Protege a aplicação de algumas vulnerabilidades conhecidas;
+    this.app.use(helmet({
+      crossOriginEmbedderPolicy: false,
+    }));// Protege a aplicação de algumas vulnerabilidades conhecidas;
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use('/image/', express.static(resolve(__dirname, '..', 'uploads', 'image')));
