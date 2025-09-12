@@ -18,7 +18,8 @@ import fotoRoutes from './routes/fotoRoutes';
 
 const whiteList = [
   'http://localhost:3001',
-  'http://localhost:3000' //Depois veremos como colocar o domínio da aplicação
+  'http://localhost:3000', //Depois veremos como colocar o domínio da aplicação
+  'http://192.168.20.151'
 ];
 
 const corsOption = {
