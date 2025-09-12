@@ -26,7 +26,7 @@ export default class Foto extends Model {//Aqui estamos a criar os nossos models
       url: {
         type: Sequelize.VIRTUAL,//Para criar um dado virtual no nosso model
         get(){
-          return `${appConfig.url}/${this.getDataValue('filename')}`//Pega o valor do campo filename
+          return `${appConfig.url}/image/${this.getDataValue('filename')}`//Pega o valor do campo filename
         }
       },
 

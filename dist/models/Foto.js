@@ -26,7 +26,7 @@ var _appConfig = require('../config/appConfig'); var _appConfig2 = _interopRequi
       url: {
         type: _sequelize2.default.VIRTUAL,//Para criar um dado virtual no nosso model
         get(){
-          return `${_appConfig2.default.url}/${this.getDataValue('filename')}`//Pega o valor do campo filename
+          return `${_appConfig2.default.url}/image/${this.getDataValue('filename')}`//Pega o valor do campo filename
         }
       },
 
