@@ -9,6 +9,7 @@ import { resolve } from 'path';
 import express from 'express';//ola
 import cors from 'cors';
 import helmet from 'helmet';
+import delay from "express-delay";
 
 import homeRoutes from './routes/homeRoutes';
 import userRoutes from './routes/userRoutes';
@@ -44,6 +45,7 @@ class App {
     this.app.use(helmet({
       crossOriginEmbedderPolicy: false,
     }));// Protege a aplicação de algumas vulnerabilidades conhecidas;
+    this.app.use(delay(2500));
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use('/image/', express.static(resolve(__dirname, '..', 'uploads', 'image')));
